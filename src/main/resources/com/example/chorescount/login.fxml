@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chorescount.WelcomeController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FDB7E6;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="256.0" fitWidth="264.0" layoutX="1.0" layoutY="53.0">
+                    <image>
+                        <Image url="@../../../../../../../../../Images/ChoresCount/Logo.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="38.0" layoutY="230.0" prefHeight="19.0" prefWidth="190.0" text="Flatsharing, Couldn't Be Better !">
+                    <font>
+                        <Font name="Corbel" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="379.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="loginButton" blendMode="SRC_ATOP" layoutX="98.0" layoutY="168.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #cc1db9;" text="Username" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="signupButton" blendMode="SRC_ATOP" layoutX="98.0" layoutY="235.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #cc1db9;" text="Password" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="147.0" layoutY="68.0">
+                    <image>
+                        <Image url="@../../../../../../../../../Images/ChoresCount/logo_lock.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
