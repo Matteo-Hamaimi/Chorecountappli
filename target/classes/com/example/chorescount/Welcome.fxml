@@ -30,7 +30,7 @@
    <right>
       <AnchorPane prefHeight="400.0" prefWidth="379.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="loginButton" blendMode="SRC_ATOP" layoutX="98.0" layoutY="168.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #cc1db9;" text="Log in" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button fx:id="loginButton" blendMode="SRC_ATOP" layoutX="98.0" layoutY="154.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #cc1db9;" text="Log in" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="Century Gothic Bold" size="14.0" />
                </font>
@@ -41,7 +41,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Button fx:id="signButton" blendMode="SRC_ATOP" layoutX="98.0" layoutY="235.0" mnemonicParsing="false" onAction="#signButtonAction" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #cc1db9;" text="Sign up" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button fx:id="signButton" blendMode="SRC_ATOP" layoutX="98.0" layoutY="221.0" mnemonicParsing="false" onAction="#signButtonAction" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #cc1db9;" text="Sign up" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="Century Gothic Bold" size="14.0" />
                </font>
