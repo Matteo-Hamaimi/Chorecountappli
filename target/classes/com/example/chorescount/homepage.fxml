@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chorescount.homeController">
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane layoutX="14.0" layoutY="31.0" prefHeight="98.0" prefWidth="127.0" style="-fx-background-color: #cc1db9; -fx-background-radius: 30;" />
+            <BorderPane layoutX="155.0" layoutY="31.0" prefHeight="150.0" prefWidth="130.0" style="-fx-background-color: #cc1db9; -fx-background-radius: 30;">
+               <top>
+                  <Button fx:id="kitchenButton" mnemonicParsing="false" onAction="#kitchenButtonAction" prefHeight="20.0" prefWidth="22.0" text="+" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </top>
+            </BorderPane>
+            <BorderPane layoutX="300.0" layoutY="31.0" prefHeight="146.0" prefWidth="130.0" style="-fx-background-color: #cc1db9; -fx-background-radius: 30;">
+               <top>
+                  <Button fx:id="restroomButton" mnemonicParsing="false" onAction="#restroomButtonAction" prefHeight="20.0" prefWidth="22.0" text="+" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </top>
+            </BorderPane>
+            <BorderPane layoutX="447.0" layoutY="31.0" prefHeight="102.0" prefWidth="130.0" style="-fx-background-color: #cc1db9; -fx-background-radius: 30;">
+               <top>
+                  <Button fx:id="otherButton" mnemonicParsing="false" onAction="#otherButtonAction" prefHeight="20.0" prefWidth="22.0" text="+" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </top>
+            </BorderPane>
+            <Button fx:id="retourButton" layoutX="555.0" layoutY="1.0" mnemonicParsing="false" onAction="#retourButtonAction" prefHeight="18.0" prefWidth="44.0" text="retour" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane layoutX="14.0" layoutY="-50.0" prefHeight="202.0" prefWidth="130.0" style="-fx-background-color: #cc1db9; -fx-background-radius: 30;">
+               <bottom>
+                  <Button fx:id="accountButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="31.0" text="+" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="158.0" layoutY="-7.0" prefHeight="159.0" prefWidth="130.0" style="-fx-background-color: #cc1db9; -fx-background-radius: 30;">
+               <top>
+                  <Button fx:id="garageButton" mnemonicParsing="false" onAction="#garageButtonAction" prefHeight="20.0" prefWidth="22.0" text="+" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </top>
+            </BorderPane>
+            <BorderPane layoutX="300.0" layoutY="-8.0" prefHeight="161.0" prefWidth="130.0" style="-fx-background-color: #cc1db9; -fx-background-radius: 30;">
+               <top>
+                  <Button fx:id="bathroomButton" mnemonicParsing="false" onAction="#bathroomButtonAction" prefHeight="20.0" prefWidth="22.0" text="+" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </top>
+            </BorderPane>
+            <BorderPane layoutX="446.0" layoutY="-47.0" prefHeight="199.0" prefWidth="130.0" style="-fx-background-color: #cc1db9; -fx-background-radius: 30;" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

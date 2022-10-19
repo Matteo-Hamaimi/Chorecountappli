@@ -37,19 +37,11 @@ public class WelcomeController  implements Initializable {
 
 
     public void loginButtonAction(ActionEvent event ) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("login.fxml"));
-        Stage loginStage= (Stage) loginButton.getScene().getWindow();
-        loginStage.setTitle("ChoresCount");
-        loginStage.setScene(new Scene(fxmlLoader.load(),600,400));
-        loginStage.show();}
+        DBUtils.changetexte(loginButton,"homepage.fxml");}
     
 
     public void signButtonAction(ActionEvent event  ) throws Exception{
-        FXMLLoader fxmlLoader = new FXMLLoader(WelcomeController.class.getResource("register.fxml"));
-        Stage signupStage= (Stage) signButton.getScene().getWindow();
-        signupStage.setTitle("ChoresCount");
-        signupStage.setScene(new Scene(fxmlLoader.load(),600,400));
-        signupStage.show();}
+        DBUtils.changetexte(signButton,"homepage.fxml");}
 
 
 }
