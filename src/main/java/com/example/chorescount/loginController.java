@@ -8,11 +8,14 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class loginController {
+    public static boolean logged;
 
     @FXML
     private Button cancelButton;
@@ -25,12 +28,10 @@ public class loginController {
     @FXML
     private Label loginMessageLabel;
 
-
     @FXML
     private Button loginButton;
     public void loginButtonOnAction(ActionEvent e){
         if(!usernameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()){
-            //loginMessageLabel.setText("You try to login");
             validateLogin();
         }
         else{
@@ -38,36 +39,41 @@ public class loginController {
         }
     }
 
+
     @FXML
     private PasswordField passwordPasswordField;
-
     @FXML
     private TextField usernameTextField;
 
+    private Statement stmt;
+
+
     public void validateLogin(){
-        DatabaseConnection connectNow = new DatabaseConnection();
-        Connection connectDB = connectNow.getConnection();
+        try{
+            //Contacting the driver
+            Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+            //JOptionPane.showMessageDialog(null, "Driver Loaded");
 
-        String verifyLogin = "SELECT count(1) from users where username = '" + usernameTextField.getText()
-                + "' and password = '" +passwordPasswordField.getText() +"'";
+            //Installing Driver and pointing to the DB
+            String url = "jdbc:ucanaccess://C:\\Users\\Mrics\\Documents\\ChoresCountDB.accdb";
 
-        try {
-
-            Statement statement = connectDB.createStatement();
-            ResultSet queryResult = statement.executeQuery(verifyLogin);
-
+            //Connecting to DB
+            Connection connection = DriverManager.getConnection(url);
+            //JOptionPane.showMessageDialog(null, "Database Connected");
+            stmt = connection.createStatement();
+            String verifyLogin = "SELECT count(1) from users where username = '" + usernameTextField.getText()
+                    + "' and password = '" +passwordPasswordField.getText() +"'";
+            ResultSet queryResult = stmt.executeQuery(verifyLogin);
             while(queryResult.next()){
                 if (queryResult.getInt(1) == 1){
-                    loginMessageLabel.setText("Welcome");
+                    logged = true;
                 }else{
-                    loginMessageLabel.setText("Please try again");
+                    logged = false;
                 }
             }
-
-        }catch(Exception e){
-            e.printStackTrace();
+        } catch (Exception ex)
+        {
+            JOptionPane.showMessageDialog(null, "ERROR " + ex);
         }
-
     }
-
 }

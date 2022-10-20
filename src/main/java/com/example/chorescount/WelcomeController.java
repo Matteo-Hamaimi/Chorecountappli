@@ -37,11 +37,11 @@ public class WelcomeController  implements Initializable {
 
 
     public void loginButtonAction(ActionEvent event ) throws Exception {
-        DBUtils.changetexte(loginButton,"homepage.fxml");}
+        DBUtils.changetexte(loginButton,"login.fxml");}
     
 
     public void signButtonAction(ActionEvent event  ) throws Exception{
-        DBUtils.changetexte(signButton,"homepage.fxml");}
+        DBUtils.changetexte(signButton,"register.fxml");}
 
 
 }

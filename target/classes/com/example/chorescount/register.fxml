@@ -1,48 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="register" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chorescount.WelcomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chorescount.registerController">
     <left>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FDB7E6;" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fitHeight="256.0" fitWidth="264.0" layoutX="1.0" layoutY="53.0">
-                    <image>
-                        <Image url="@../../../../../../../../../Images/ChoresCount/Logo.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="38.0" layoutY="230.0" prefHeight="19.0" prefWidth="190.0" text="Flatsharing, Couldn't Be Better !">
+                <Label layoutX="38.0" layoutY="230.0" prefHeight="19.0" prefWidth="190.0" text="Flatsharing Couldn't Be Better !">
                     <font>
-                        <Font name="Corbel" size="12.0" />
+                        <Font name="Century Gothic Bold" size="12.0" />
                     </font>
                 </Label>
+                <ImageView fx:id="LogoImageView" fitHeight="256.0" fitWidth="264.0" layoutX="1.0" layoutY="53.0">
+                    <image>
+                        <Image url="@../../../../../../ChoresCount/Logo.png" />
+                    </image>
+                </ImageView>
             </children>
         </AnchorPane>
     </left>
     <right>
         <AnchorPane prefHeight="400.0" prefWidth="379.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="loginButton" blendMode="SRC_ATOP" layoutX="98.0" layoutY="168.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #cc1db9;" text="Register" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+                <Button fx:id="RegisterButton" blendMode="SRC_ATOP" layoutX="73.0" layoutY="306.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="32.0" prefWidth="203.0" style="-fx-background-color: #cc1db9;" text="REGISTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                     <font>
                         <Font name="Century Gothic Bold" size="14.0" />
                     </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
                 </Button>
-                <Button fx:id="signupButton" blendMode="SRC_ATOP" layoutX="98.0" layoutY="235.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #cc1db9;" text="Password" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+                <TextField fx:id="UsernameTextField" layoutX="91.0" layoutY="177.0" promptText="Username">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor></TextField>
+                <PasswordField fx:id="PasswordTextField" layoutX="90.0" layoutY="212.0" promptText="Password">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor></PasswordField>
+                <Label layoutX="148.0" layoutY="55.0" prefHeight="23.0" prefWidth="74.0" text="SIGN UP">
                     <font>
-                        <Font name="Century Gothic Bold" size="14.0" />
+                        <Font name="Century Gothic Bold" size="18.0" />
                     </font>
-                </Button>
-                <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="147.0" layoutY="68.0">
+                </Label>
+                <ImageView fx:id="SignUpImageView" fitHeight="42.0" fitWidth="41.0" layoutX="98.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../../../../Images/ChoresCount/logo_lock.png" />
+                        <Image url="@../../../../../../ChoresCount/registration_logo.png" />
                     </image>
                 </ImageView>
+                <TextField fx:id="FirstnameTextField" layoutX="90.0" layoutY="107.0" promptText="Firstname">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor></TextField>
+                <Label fx:id="AlreadyRegisterLabel" layoutX="105.0" layoutY="346.0" text="Already registered ? Log in">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+                <TextField fx:id="LastnameTextField" layoutX="91.0" layoutY="142.0" promptText="Lastname">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor></TextField>
+                <Label fx:id="RegistrationMessageLabel" blendMode="SRC_ATOP" layoutX="80.0" layoutY="87.0" text="User has been registered successfully !" textFill="#cc1db9" visible="false">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+                <Label fx:id="ConfirmPasswordLabel" blendMode="SRC_ATOP" layoutX="108.0" layoutY="281.0" text="Password doesn't match !" textFill="#cc1db9" visible="false">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="ConfirmPasswordTextField" layoutX="89.0" layoutY="247.0" promptText="Confirm password">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </PasswordField>
+                <Button fx:id="CloseButton" layoutX="296.0" layoutY="-1.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="30.0" prefWidth="31.0" style="-fx-background-color: #cc1db9;" text="X" />
+                <Button fx:id="BackButton" layoutX="14.0" layoutY="-1.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: #cc1db9;" text="←">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
             </children>
         </AnchorPane>
     </right>

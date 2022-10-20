@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chorescount.FlatSharingCreation">
+    <children>
+        <Label layoutX="257.0" layoutY="53.0" text="New Flatsharing" />
+        <Label layoutX="94.0" layoutY="99.0" text="Flatsharing Name" />
+        <TextField fx:id="txtFlatsharingName" layoutX="238.0" layoutY="95.0" promptText="Name" />
+        <Label layoutX="108.0" layoutY="191.0" text="Address" />
+        <Label layoutX="115.0" layoutY="237.0" text="City" />
+        <Label layoutX="111.0" layoutY="284.0" text="State" />
+        <TextField fx:id="txtAddress" layoutX="238.0" layoutY="187.0" promptText="Address" />
+        <TextField fx:id="txtCity" layoutX="238.0" layoutY="233.0" promptText="City" />
+        <TextField fx:id="txtState" layoutX="238.0" layoutY="271.0" promptText="State" />
+        <TextField fx:id="txtZipcode" layoutX="238.0" layoutY="310.0" promptText="Zipcode" />
+        <Label layoutX="108.0" layoutY="314.0" text="Zipcode" />
+        <Button fx:id="btnSubmit" layoutX="257.0" layoutY="358.0" mnemonicParsing="false" onAction="#SubmitButtonOnAction" text="Submit" />
+        <Button fx:id="btnClose" layoutX="525.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnCloseOnAction" text="Close" />
+    </children>
+</AnchorPane>
