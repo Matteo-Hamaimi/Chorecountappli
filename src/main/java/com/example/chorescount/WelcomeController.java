@@ -29,9 +29,8 @@ public class WelcomeController  implements Initializable {
 
     @Override
     public void initialize(URL url,ResourceBundle resourceBundle ){
-        File logoFile = new File("ChoresCount/Logo.png");
-        Image logoImage = new Image(logoFile.toURI().toString());
-        LogoViewsImage.setImage(logoImage);
+        DBUtils.SetImage("ChoresCount/Logo.png",LogoViewsImage);
+
 
     }
 

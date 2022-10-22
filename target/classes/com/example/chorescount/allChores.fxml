@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chorescount.tableController">
+    <children>
+        <TableView fx:id="choreTable" layoutX="72.0" layoutY="55.0" prefHeight="220.0" prefWidth="457.0" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="71.0" AnchorPane.topAnchor="55.0">
+            <columns>
+                <TableColumn fx:id="colIdChore" prefWidth="75.8" text="Chore ID" />
+                <TableColumn fx:id="colUsername" prefWidth="75.8" text="Username" />
+                <TableColumn fx:id="colChoreName" prefWidth="75.8" text="Chore name" />
+                <TableColumn fx:id="colCategory" prefWidth="75.8" text="Category" />
+                <TableColumn fx:id="colDescription" prefWidth="75.8" text="Description" />
+                <TableColumn fx:id="colDone" prefWidth="75.8" text="Done" />
+            </columns>
+        </TableView>
+        <Button fx:id="DeleteButton" layoutX="278.0" layoutY="346.0" mnemonicParsing="false" onAction="#deleteChoreButtonOnAction" text="Done" />
+        <TextField fx:id="IdChoreTextField" layoutX="197.0" layoutY="292.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter the ID of the chore performed" />
+        <Label fx:id="IdErrorLabel" layoutX="251.0" layoutY="325.0" text="This ID doesn't exists !" textFill="RED" visible="false">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

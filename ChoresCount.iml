@@ -53,5 +53,16 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../Fichier/L3 cours MATTEO HAMAIMI/Semestre 1/Cours/Web1/Basededonée/Access Drivers" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../../Fichier/L3 cours MATTEO HAMAIMI/Semestre 1/Cours/Web1/Basededonée/Access Drivers" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="commons-lang-2.6" level="project" />
   </component>
 </module>

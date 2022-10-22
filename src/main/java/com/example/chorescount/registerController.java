@@ -96,7 +96,7 @@ public class registerController implements Initializable{
             System.out.println();
 
             //Installing Driver and pointing to the DB
-            String url = "jdbc:ucanaccess://C:\\Users\\grdan\\OneDrive\\Documents\\EFREI\\Etats-Unis\\Cours\\Java\\AppChoresCount\\Chorecountappli\\ChoresCountDB.accdb";
+            String url = "jdbc:ucanaccess://C:\\Users\\matte\\OneDrive\\Documents\\Application\\Chorecountappli\\ChoresCountDB.accdb";
 
             //Connecting to DB
             Connection connection = DriverManager.getConnection(url);
